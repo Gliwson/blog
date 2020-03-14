@@ -685,6 +685,32 @@
                     </configuration>
                 </plugin>
                 <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.cargo</groupId>
+                    <artifactId>cargo-maven2-plugin</artifactId>
+                    <version>1.6.2</version>
+                    <configuration>
+                        <container>
+                            <containerId>tomcat8x</containerId>
+                            <home>${catalina.home}</home>
+                        </container>
+                        <configuration>
+                            <type>existing</type>
+                            <home>${catalina.home.webapps}</home>
+                        </configuration>
+                        <deployables>
+                            <deployable>
+                                <properties>
+                                    <context>cargo</context>
+                                </properties>
+                            </deployable>
+                        </deployables>
+                    </configuration>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-idea-plugin</artifactId>
                     <version>${maven-idea-plugin.version}</version>
