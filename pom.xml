@@ -695,11 +695,11 @@
                     <configuration>
                         <container>
                             <containerId>tomcat8x</containerId>
-                            <home>${catalina.home}</home>
+                            <home>${catalina.base}</home>
                         </container>
                         <configuration>
                             <type>existing</type>
-                            <home>${catalina.home.webapps}</home>
+                            <home>${catalina.base}</home>
                         </configuration>
                         <deployables>
                             <deployable>
