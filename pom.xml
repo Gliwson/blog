@@ -704,7 +704,7 @@
                         <deployables>
                             <deployable>
                                 <properties>
-                                    <context>cargo</context>
+                                    <context>blog</context>
                                 </properties>
                             </deployable>
                         </deployables>
